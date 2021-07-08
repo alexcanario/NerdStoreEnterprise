@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using NSE.Identidade.API.Models;
 
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace NSE.Identidade.API.Controllers {
     [Route("api/[controller]")]
@@ -20,6 +21,9 @@ namespace NSE.Identidade.API.Controllers {
 
 
         [HttpPost("registrar")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult> Registrar(UsuarioRegistroViewModel usuarioRegistroVM) {
             if (!ModelState.IsValid) return BadRequest();
 
