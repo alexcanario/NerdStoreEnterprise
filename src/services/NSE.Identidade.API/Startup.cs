@@ -1,4 +1,4 @@
-using System;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -9,6 +9,11 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
 using NSE.Identidade.API.Data;
+
+using System;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using NSE.Identidade.API.Extensions;
 
 namespace NSE.Identidade.API {
     public class Startup {
@@ -31,6 +36,32 @@ namespace NSE.Identidade.API {
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+            #endregion
+
+            #region Suporte ao Jason Web Token (JWT)
+
+            //Obter os dados do AppSettings referente aos dados do JWT
+            var appSettingsSection = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(appSettingsSection);
+            var appSettings = appSettingsSection.Get<AppSettings>();
+
+            var keyJwt = Encoding.ASCII.GetBytes(appSettings.Secret);
+
+            services.AddAuthentication(opt => {
+                opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(bearerOptions => {
+                bearerOptions.RequireHttpsMetadata = true;
+                bearerOptions.SaveToken = true;
+                bearerOptions.TokenValidationParameters = new TokenValidationParameters() {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(keyJwt),
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidAudience = appSettings.ValidoEm,
+                    ValidIssuer = appSettings.Emissor
+                };
+            });
             #endregion
 
             //Adiciona suporte ao WebApi
