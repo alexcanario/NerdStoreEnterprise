@@ -68,15 +68,20 @@ namespace NSE.Identidade.API {
             services.AddControllers();
 
             #region Suporte ao Swagger
+            //services.AddSwaggerGen(c => {
+            //    c.SwaggerDoc("v1", new OpenApiInfo {
+            //        Title = "NerdStore Enterprise Identity API", 
+            //        Description = "Athentication Web Api",
+            //        Contact = new OpenApiContact() { Name = "Alex Canario", Email = "alexcanario@gmail.com", Url = new Uri("https://www.linkedin.com/in/alex-canario/") },
+            //        License = new OpenApiLicense() { Name = "MIT", Url = new Uri("https://opensource.org/licenses/MIT") },
+            //        Version = "v1"
+            //    });
+            //});
+
             services.AddSwaggerGen(c => {
-                c.SwaggerDoc("v1", new OpenApiInfo {
-                    Title = "NerdStore Enterprise Identity API", 
-                    Description = "Athentication Web Api",
-                    Contact = new OpenApiContact() { Name = "Alex Canario", Email = "alexcanario@gmail.com", Url = new Uri("https://www.linkedin.com/in/alex-canario/") },
-                    License = new OpenApiLicense() { Name = "MIT", Url = new Uri("https://opensource.org/licenses/MIT") },
-                    Version = "v1"
-                });
+                c.SwaggerDoc("v1", new OpenApiInfo {Title = "NSE.Identidade.API", Version = "v1"});
             });
+
             #endregion
         }
 
