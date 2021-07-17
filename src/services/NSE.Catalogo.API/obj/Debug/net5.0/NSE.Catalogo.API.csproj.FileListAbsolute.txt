@@ -48,7 +48,6 @@ C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Catalogo.API\obj\Debug\net5.
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Catalogo.API\obj\Debug\net5.0\NSE.Catalogo.API.MvcApplicationPartsAssemblyInfo.cs
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Catalogo.API\obj\Debug\net5.0\NSE.Catalogo.API.MvcApplicationPartsAssemblyInfo.cache
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Catalogo.API\obj\Debug\net5.0\staticwebassets\NSE.Catalogo.API.StaticWebAssets.Manifest.cache
-C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Catalogo.API\obj\Debug\net5.0\staticwebassets\NSE.Catalogo.API.StaticWebAssets.xml
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Catalogo.API\obj\Debug\net5.0\scopedcss\bundle\NSE.Catalogo.API.styles.css
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Catalogo.API\obj\Debug\net5.0\NSE.Catalogo.API.RazorTargetAssemblyInfo.cache
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Catalogo.API\obj\Debug\net5.0\NSE.Catalogo.API.csproj.CopyComplete

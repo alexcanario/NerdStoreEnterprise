@@ -7,6 +7,5 @@ namespace NSE.Identidade.API.Extensions {
 
             return ret;
         }
-        
     }
 }

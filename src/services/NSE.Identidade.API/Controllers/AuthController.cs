@@ -1,53 +1,50 @@
-﻿using System;
-using System.Globalization;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+
+using NSE.Identidade.API.Extensions;
+using NSE.Identidade.API.Models;
+
+using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-
-using NSE.Identidade.API.Models;
-
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-using NSE.Identidade.API.Extensions;
-using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames;
+
+//using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames;
 
 namespace NSE.Identidade.API.Controllers {
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase {
-        private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
         private readonly AppSettings _appSettings;
-
-        public AuthController(SignInManager<IdentityUser> signInManager,
-                              UserManager<IdentityUser> userManager, 
-                              IOptions<AppSettings> appSettings) {
-            _signInManager = signInManager;
+        public AuthController(UserManager<IdentityUser> userManager,
+                                SignInManager<IdentityUser> signInManager,
+                                IOptions<AppSettings> appSettings) {
             _userManager = userManager;
+            _signInManager = signInManager;
             _appSettings = appSettings.Value;
         }
-
 
         [HttpPost("registrar")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult> Registrar(UsuarioRegistroViewModel usuarioRegistroVM) {
-            if (!ModelState.IsValid) return BadRequest();
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var identityUser = new IdentityUser() {
+            var identityUser = new IdentityUser {
                 UserName = usuarioRegistroVM.Email,
                 Email = usuarioRegistroVM.Email,
                 EmailConfirmed = true
             };
 
-            var result = await _userManager.CreateAsync(identityUser, usuarioRegistroVM.Senha);
-            if(result.Succeeded) {
+            var userCreated = await _userManager.CreateAsync(identityUser, usuarioRegistroVM.Senha);
+            if (userCreated.Succeeded) {
                 await _signInManager.SignInAsync(identityUser, false);
                 return Ok();
             }
@@ -55,20 +52,19 @@ namespace NSE.Identidade.API.Controllers {
             return BadRequest();
         }
 
-        [HttpPost("logar")]
-        public async Task<ActionResult> Logar(UsuarioLoginViewModel usuarioLoginVM) {
-            if (!ModelState.IsValid) return BadRequest();
+        [HttpPost("entrar")]
+        public async Task<ActionResult> entrar(UsuarioLoginViewModel usuario) {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var result = await _signInManager.PasswordSignInAsync(usuarioLoginVM.Email, usuarioLoginVM.Senha, false, true);
+            var result = await _signInManager.PasswordSignInAsync(usuario.Email, usuario.Senha, false, true);
+            var jwt = await GerarJwt(usuario.Email);
+            if (result.Succeeded) return Ok(jwt);
 
-            if (!result.Succeeded) return BadRequest();
-
-            var token = await GerarJwt(usuarioLoginVM.Email);
-            return Ok(token);
+            return BadRequest(usuario);
         }
 
-        public async Task<UsuarioRespostaLogin> GerarJwt(string email) {
-            #region Obtendo usuário, claims  e roles
+        private async Task<UsuarioResposta> GerarJwt(string email) {
+            #region Obter as Claims do Usuário
             var user = await _userManager.FindByEmailAsync(email);
             var claims = await _userManager.GetClaimsAsync(user);
             var roles = await _userManager.GetRolesAsync(user);
@@ -76,45 +72,48 @@ namespace NSE.Identidade.API.Controllers {
             claims.Add(new Claim(JwtRegisteredClaimNames.Sub, user.Id));
             claims.Add(new Claim(JwtRegisteredClaimNames.Email, user.Email));
             claims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
-            claims.Add(new Claim(JwtRegisteredClaimNames.Nbf, DateTime.UnixEpoch.ToString(CultureInfo.InvariantCulture)));
-            claims.Add(new Claim(JwtRegisteredClaimNames.Iat, DateTime.UnixEpoch.ToString(CultureInfo.InvariantCulture), ClaimValueTypes.Integer64));
+            claims.Add(new Claim(JwtRegisteredClaimNames.Nbf, ToUnixEpochDate(DateTime.UtcNow).ToString()));
+            claims.Add(new Claim(JwtRegisteredClaimNames.Iat, ToUnixEpochDate(DateTime.UtcNow).ToString(), ClaimValueTypes.Integer64));
 
-            foreach (var role in roles) {
-                claims.Add(new Claim("role", role));
+            foreach (var userRole in roles) {
+                claims.Add(new Claim("role", userRole));
             }
 
-            var claimsIdentity = new ClaimsIdentity(claims);
-            
-            var claimsIdentity_ = new ClaimsIdentity();
-            claimsIdentity_.AddClaims(claims);
+            var claimsIdentity = new ClaimsIdentity();
+            claimsIdentity.AddClaims(claims);
             #endregion
 
-            #region Gerando o token
-            var secret = _appSettings.Secret;
-            var encodedSecret = Encoding.ASCII.GetBytes(secret);
-
+            #region Gerar o Token
             var tokenHandler = new JwtSecurityTokenHandler();
-            
-            var token = tokenHandler.CreateToken( new SecurityTokenDescriptor() {
+            var encondedKey = Encoding.ASCII.GetBytes(_appSettings.Segredo);
+
+            var token = tokenHandler.CreateToken(new SecurityTokenDescriptor() {
                 Issuer = _appSettings.Emissor,
                 Audience = _appSettings.ValidoEm,
                 Subject = claimsIdentity,
                 Expires = DateTime.UtcNow.AddHours(_appSettings.ExpiracaoHoras),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(encodedSecret), SecurityAlgorithms.HmacSha256Signature)
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(encondedKey), SecurityAlgorithms.HmacSha256Signature)
             });
 
             var encodedToken = tokenHandler.WriteToken(token);
             #endregion
 
-            return new UsuarioRespostaLogin() {
+            #region Gerar a classe UsuarioResposta para devolver
+            var usuarioResposta = new UsuarioResposta {
                 AccessToken = encodedToken,
                 ExpiresIn = TimeSpan.FromHours(_appSettings.ExpiracaoHoras).TotalSeconds,
-                UsuarioToken = new UsuarioToken() {
+                UsuarioToken = new UsuarioToken {
                     Id = user.Id,
                     Email = user.Email,
-                    Claims = claims.Select(c => new UsuarioClaim(){ Type = c.Type, Value = c.Value })
+                    Claims = claims.Select(c => new UsuarioClaim() { Type = c.Type, Value = c.Value })
                 }
             };
+            #endregion
+
+            return usuarioResposta;
         }
+
+        private static long ToUnixEpochDate(DateTime date)
+            => (long)Math.Round((date.ToUniversalTime() - new DateTimeOffset(1970, 1, 1, 0, 0, 0, TimeSpan.Zero)).TotalSeconds);
     }
 }

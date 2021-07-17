@@ -692,7 +692,6 @@ C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\NSE.W
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\NSE.WebApp.MVC.RazorAssemblyInfo.cache
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\NSE.WebApp.MVC.RazorAssemblyInfo.cs
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\staticwebassets\NSE.WebApp.MVC.StaticWebAssets.Manifest.cache
-C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\staticwebassets\NSE.WebApp.MVC.StaticWebAssets.xml
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\scopedcss\bundle\NSE.WebApp.MVC.styles.css
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\NSE.WebApp.MVC.TagHelpers.input.cache
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\NSE.WebApp.MVC.TagHelpers.output.cache

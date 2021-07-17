@@ -48,7 +48,6 @@ C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Carrinho.API\obj\Debug\net5.
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Carrinho.API\obj\Debug\net5.0\NSE.Carrinho.API.MvcApplicationPartsAssemblyInfo.cs
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Carrinho.API\obj\Debug\net5.0\NSE.Carrinho.API.MvcApplicationPartsAssemblyInfo.cache
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Carrinho.API\obj\Debug\net5.0\staticwebassets\NSE.Carrinho.API.StaticWebAssets.Manifest.cache
-C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Carrinho.API\obj\Debug\net5.0\staticwebassets\NSE.Carrinho.API.StaticWebAssets.xml
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Carrinho.API\obj\Debug\net5.0\scopedcss\bundle\NSE.Carrinho.API.styles.css
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Carrinho.API\obj\Debug\net5.0\NSE.Carrinho.API.RazorTargetAssemblyInfo.cache
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Carrinho.API\obj\Debug\net5.0\NSE.Carrinho.API.csproj.CopyComplete

@@ -48,7 +48,6 @@ C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Cliente.API\obj\Debug\net5.0
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Cliente.API\obj\Debug\net5.0\NSE.Cliente.API.MvcApplicationPartsAssemblyInfo.cs
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Cliente.API\obj\Debug\net5.0\NSE.Cliente.API.MvcApplicationPartsAssemblyInfo.cache
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Cliente.API\obj\Debug\net5.0\staticwebassets\NSE.Cliente.API.StaticWebAssets.Manifest.cache
-C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Cliente.API\obj\Debug\net5.0\staticwebassets\NSE.Cliente.API.StaticWebAssets.xml
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Cliente.API\obj\Debug\net5.0\scopedcss\bundle\NSE.Cliente.API.styles.css
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Cliente.API\obj\Debug\net5.0\NSE.Cliente.API.RazorTargetAssemblyInfo.cache
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Cliente.API\obj\Debug\net5.0\NSE.Cliente.API.csproj.CopyComplete

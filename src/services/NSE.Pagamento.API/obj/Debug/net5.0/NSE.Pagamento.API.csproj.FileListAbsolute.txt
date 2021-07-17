@@ -48,7 +48,6 @@ C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Pagamento.API\obj\Debug\net5
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Pagamento.API\obj\Debug\net5.0\NSE.Pagamento.API.MvcApplicationPartsAssemblyInfo.cs
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Pagamento.API\obj\Debug\net5.0\NSE.Pagamento.API.MvcApplicationPartsAssemblyInfo.cache
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Pagamento.API\obj\Debug\net5.0\staticwebassets\NSE.Pagamento.API.StaticWebAssets.Manifest.cache
-C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Pagamento.API\obj\Debug\net5.0\staticwebassets\NSE.Pagamento.API.StaticWebAssets.xml
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Pagamento.API\obj\Debug\net5.0\scopedcss\bundle\NSE.Pagamento.API.styles.css
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Pagamento.API\obj\Debug\net5.0\NSE.Pagamento.API.RazorTargetAssemblyInfo.cache
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Pagamento.API\obj\Debug\net5.0\NSE.Pagamento.API.csproj.CopyComplete
