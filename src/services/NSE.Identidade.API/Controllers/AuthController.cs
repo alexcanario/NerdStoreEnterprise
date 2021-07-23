@@ -8,6 +8,8 @@ using NSE.Identidade.API.Extensions;
 using NSE.Identidade.API.Models;
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
@@ -73,9 +75,20 @@ namespace NSE.Identidade.API.Controllers {
         }
 
         private async Task<UsuarioResposta> GerarJwt(string email) {
-            #region Obter as Claims do Usuário
             var user = await _userManager.FindByEmailAsync(email);
             var claims = await _userManager.GetClaimsAsync(user);
+            
+            var claimsIdentity = await ObterClaimsUsuarioAsync(claims, user);
+            var encodedToken = CodificarToken(claimsIdentity);
+            var usuarioResposta = ObterRespostaToken(encodedToken, user, claims);
+
+            return usuarioResposta;
+        }
+
+        private static long ToUnixEpochDate(DateTime date)
+            => (long)Math.Round((date.ToUniversalTime() - new DateTimeOffset(1970, 1, 1, 0, 0, 0, TimeSpan.Zero)).TotalSeconds);
+
+        private async Task<ClaimsIdentity> ObterClaimsUsuarioAsync(ICollection<Claim> claims, IdentityUser user) {
             var roles = await _userManager.GetRolesAsync(user);
 
             claims.Add(new Claim(JwtRegisteredClaimNames.Sub, user.Id));
@@ -90,9 +103,11 @@ namespace NSE.Identidade.API.Controllers {
 
             var claimsIdentity = new ClaimsIdentity();
             claimsIdentity.AddClaims(claims);
-            #endregion
 
-            #region Gerar o Token
+            return claimsIdentity;
+        }
+
+        private string CodificarToken(ClaimsIdentity claimsIdentity) {
             var tokenHandler = new JwtSecurityTokenHandler();
             var encondedKey = Encoding.ASCII.GetBytes(_appSettings.Segredo);
 
@@ -105,9 +120,10 @@ namespace NSE.Identidade.API.Controllers {
             });
 
             var encodedToken = tokenHandler.WriteToken(token);
-            #endregion
+            return encodedToken;
+        }
 
-            #region Gerar a classe UsuarioResposta para devolver
+        private UsuarioResposta ObterRespostaToken(string encodedToken, IdentityUser user, ICollection<Claim> claims) {
             var usuarioResposta = new UsuarioResposta {
                 AccessToken = encodedToken,
                 ExpiresIn = TimeSpan.FromHours(_appSettings.ExpiracaoHoras).TotalSeconds,
@@ -117,12 +133,7 @@ namespace NSE.Identidade.API.Controllers {
                     Claims = claims.Select(c => new UsuarioClaim() { Type = c.Type, Value = c.Value })
                 }
             };
-            #endregion
-
             return usuarioResposta;
         }
-
-        private static long ToUnixEpochDate(DateTime date)
-            => (long)Math.Round((date.ToUniversalTime() - new DateTimeOffset(1970, 1, 1, 0, 0, 0, TimeSpan.Zero)).TotalSeconds);
     }
 }
