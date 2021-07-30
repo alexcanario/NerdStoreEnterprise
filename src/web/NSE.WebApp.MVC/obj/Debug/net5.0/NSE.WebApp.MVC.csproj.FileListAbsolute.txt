@@ -711,3 +711,6 @@ C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\NSE.W
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\ref\NSE.WebApp.MVC.dll
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\NSE.WebApp.MVC.pdb
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\NSE.WebApp.MVC.genruntimeconfig.cache
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\Razor\Views\Identidade\Login.cshtml.g.cs
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\Razor\Views\Identidade\Registro.cshtml.g.cs
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs

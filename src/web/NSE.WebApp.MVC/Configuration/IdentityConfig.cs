@@ -2,24 +2,20 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace NSE.WebApp.MVC.Configuration {
+namespace NSE.WebApp.MVC.Configuration
+{
     public static class IdentityConfig {
-        public static IServiceCollection AddIdentityConfig(this IServiceCollection services) {
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme);
-
-            return services;
+        public static void AddIdentityConfig(this IServiceCollection services) {
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(opt => {
+                    opt.LoginPath = "/login";
+                    opt.AccessDeniedPath = "/erro/403";
+                });
         }
 
-        public static IApplicationBuilder UseIdentityConfig(this IApplicationBuilder app) {
+        public static void UseIdentityConfig(this IApplicationBuilder app) {
             app.UseAuthentication();
             app.UseAuthorization();
-
-            return app.UseIdentityConfig();
         }
     }
 }

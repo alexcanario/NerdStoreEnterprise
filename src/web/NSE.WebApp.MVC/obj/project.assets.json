@@ -824,7 +824,7 @@
   },
   "packageFolders": {
     "C:\\Users\\alexc\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\Offline Packages": {},
+    "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
@@ -839,7 +839,7 @@
       "outputPath": "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\web\\NSE.WebApp.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\Offline Packages",
+        "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -855,7 +855,7 @@
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\System\\Components\\Packages": {},
+        "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
