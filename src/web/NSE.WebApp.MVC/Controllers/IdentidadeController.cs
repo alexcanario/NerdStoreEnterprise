@@ -1,26 +1,29 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 using NSE.WebApp.MVC.Models;
+using NSE.WebApp.MVC.Services;
 
 using System.Threading.Tasks;
 
-namespace NSE.WebApp.MVC.Controllers
-{
+namespace NSE.WebApp.MVC.Controllers {
     public class IdentidadeController : Controller {
+        private readonly IAutenticacaoService _autenticacaoService;
+
+        public IdentidadeController(IAutenticacaoService autenticacaoService) {
+            _autenticacaoService = autenticacaoService;
+        }
+
         [HttpGet("nova-conta")]
-        public IActionResult Registro() {
+        public IActionResult Registrar() {
             return View();
         }
 
         [HttpPost("nova-conta")]
-        public async Task<IActionResult> Registro(UsuarioRegistro usuarioRegistro) {
+        public async Task<IActionResult> Registrar(UsuarioRegistro usuarioRegistro) {
             if (!ModelState.IsValid) return View(usuarioRegistro);
 
-            //Chama o método Registro da Api
-
-            if(false) return View(usuarioRegistro);
-
-            //Login
+            var responseRegister = await _autenticacaoService.Registrar(usuarioRegistro);
+            if(string.IsNullOrEmpty(responseRegister)) return View(usuarioRegistro);
 
             return RedirectToAction("Index", "Home");
         }
@@ -35,9 +38,9 @@ namespace NSE.WebApp.MVC.Controllers
             if (!ModelState.IsValid) return View(usuarioLogin);
 
             //Chama o método de login
-            if(false) return View(usuarioLogin);
+            var responseLogin = await _autenticacaoService.Login(usuarioLogin);
+            if(string.IsNullOrEmpty(responseLogin)) return View(usuarioLogin);
 
-            //Login
             return RedirectToAction("Index", "Home");
         }
 
