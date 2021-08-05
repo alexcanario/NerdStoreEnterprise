@@ -714,3 +714,10 @@ C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\NSE.W
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\Razor\Views\Identidade\Login.cshtml.g.cs
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\Razor\Views\Identidade\Registro.cshtml.g.cs
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
