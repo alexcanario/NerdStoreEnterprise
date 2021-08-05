@@ -14,26 +14,30 @@ namespace NSE.WebApp.MVC.Services
             _httpClient = httpClient;
         }
 
-        public async Task<string> Login(UsuarioLogin usuarioLogin) {
+        public async Task<UsuarioRespostaLogin> Login(UsuarioLogin usuarioLogin) {
             var usuarioJson = JsonSerializer.Serialize(usuarioLogin);
             var loginContent = new StringContent(usuarioJson, Encoding.UTF8, "application/json");
             
             var response = await _httpClient.PostAsync("https://localhost:44304/api/auth/entrar", loginContent);
             
             var responseContent = await response.Content.ReadAsStringAsync();
-            var responseString = JsonSerializer.Deserialize<string>(responseContent);
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+            };
+            var responseString = JsonSerializer.Deserialize<UsuarioRespostaLogin>(responseContent, options);
 
             return responseString;
         }
 
-        public async Task<string> Registrar(UsuarioRegistro usuarioRegistro) {
+        public async Task<UsuarioRespostaLogin> Registrar(UsuarioRegistro usuarioRegistro) {
             var usuarioJson = JsonSerializer.Serialize(usuarioRegistro);
             var registroContent = new StringContent(usuarioJson, Encoding.UTF8, "application/json");
 
             var response = await _httpClient.PostAsync("https://localhost:44304/api/auth/registrar", registroContent);
 
             var responseContent = await response.Content.ReadAsStringAsync();
-            var responseString = JsonSerializer.Deserialize<string>(responseContent);
+            var responseString = JsonSerializer.Deserialize<UsuarioRespostaLogin>(responseContent);
 
             return responseString;
         }

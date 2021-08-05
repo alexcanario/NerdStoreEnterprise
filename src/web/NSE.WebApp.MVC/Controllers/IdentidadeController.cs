@@ -23,7 +23,7 @@ namespace NSE.WebApp.MVC.Controllers {
             if (!ModelState.IsValid) return View(usuarioRegistro);
 
             var responseRegister = await _autenticacaoService.Registrar(usuarioRegistro);
-            if(string.IsNullOrEmpty(responseRegister)) return View(usuarioRegistro);
+            if(responseRegister is null) return View(usuarioRegistro);
 
             return RedirectToAction("Index", "Home");
         }
@@ -39,13 +39,13 @@ namespace NSE.WebApp.MVC.Controllers {
 
             //Chama o método de login
             var responseLogin = await _autenticacaoService.Login(usuarioLogin);
-            if(string.IsNullOrEmpty(responseLogin)) return View(usuarioLogin);
+            if(responseLogin is null) return View(usuarioLogin);
 
             return RedirectToAction("Index", "Home");
         }
 
         [HttpGet("sair")]
-        public async Task<IActionResult> Logout() {
+        public async Task<IActionResult>  Logout() {
             //Limpar o cookie
             return RedirectToAction("Index", "Home");
         }
