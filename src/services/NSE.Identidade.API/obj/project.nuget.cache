@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "k5bJcH/NbF0SyTXBJN6B9gVrC3Ow3yhhEgt0molM5M4+owmrT291x15qGm7Z9nhwrll8D4VAqh4NtWHeKhGVBA==",
+  "dgSpecHash": "sVGyo7kVbskJjql7/8v4pCl04iZumH52k1BpReeZJw6fu8HuWv1K1gh/RcZKL9A3uCAXoM1jyCO20+kQBF1wVg==",
   "success": true,
   "projectFilePath": "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\services\\NSE.Identidade.API\\NSE.Identidade.API.csproj",
   "expectedPackageFiles": [
@@ -132,8 +132,7 @@
     "C:\\Users\\alexc\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\alexc\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\alexc\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\alexc\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\alexc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.7\\microsoft.netcore.app.host.win-x64.5.0.7.nupkg.sha512"
+    "C:\\Users\\alexc\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

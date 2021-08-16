@@ -12,7 +12,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace NSE.WebApp.MVC.Controllers {
-    public class IdentidadeController : Controller {
+    public class IdentidadeController : MainController {
         private readonly IAutenticacaoService _autenticacaoService;
 
         public IdentidadeController(IAutenticacaoService autenticacaoService) {
@@ -29,7 +29,7 @@ namespace NSE.WebApp.MVC.Controllers {
             if (!ModelState.IsValid) return View(usuarioRegistro);
 
             var responseRegister = await _autenticacaoService.Registrar(usuarioRegistro);
-            //if(responseRegister is null) return View(usuarioRegistro);
+            if(ResponsePossuiErros(responseRegister.ResponseResult)) return View(usuarioRegistro);
 
             //Realizar login na app web
             await RealizarLogin(responseRegister);
@@ -48,7 +48,7 @@ namespace NSE.WebApp.MVC.Controllers {
 
             //Chama o método de login
             var responseLogin = await _autenticacaoService.Login(usuarioLogin);
-            //if(responseLogin is null) return View(usuarioLogin);
+            if(ResponsePossuiErros(responseLogin.ResponseResult)) return View(usuarioLogin);
 
             //Realizar login na app web
             await RealizarLogin(responseLogin);
@@ -57,7 +57,7 @@ namespace NSE.WebApp.MVC.Controllers {
         }
 
         [HttpGet("sair")]
-        public async Task<IActionResult>  Logout() {
+        public async Task<IActionResult> Logout() {
             //Limpar o cookie
             return RedirectToAction("Index", "Home");
         }

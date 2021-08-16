@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bGtcYhjUmokrtTYAgVN4EYAbU43vgpJfnDC/fGNxgRuvtsi8x+D6UKc+geTbne0Dr+FCNG6IcUK/PvItprJYdQ==",
+  "dgSpecHash": "P/VwzELCM7gO7hndbSX2yW7M9lYJEWG5SdFFux89ikzWnEzLXKqZ+mqE4HVDRCWxpuAKTWoSC4ZM5eVIjIGDWQ==",
   "success": true,
   "projectFilePath": "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\web\\NSE.WebApp.MVC\\NSE.WebApp.MVC.csproj",
   "expectedPackageFiles": [
@@ -28,8 +28,7 @@
     "C:\\Users\\alexc\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
     "C:\\Users\\alexc\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "C:\\Users\\alexc\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
-    "C:\\Users\\alexc\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\alexc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.7\\microsoft.netcore.app.host.win-x64.5.0.7.nupkg.sha512"
+    "C:\\Users\\alexc\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }
