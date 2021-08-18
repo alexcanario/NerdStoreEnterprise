@@ -7,7 +7,12 @@ using System.Linq;
 namespace NSE.WebApp.MVC.Controllers {
     public class MainController : Controller {
         protected bool ResponsePossuiErros(ResponseResult response) {
-            return (response is not null && response.Errors.Mensagens.Any());
+            if (response is not null && response.Errors.Mensagens.Any()) {
+                response.Errors.Mensagens.ForEach(Mensagem => { ModelState.AddModelError("Response Error: ", Mensagem); });
+                return true;
+            }
+
+            return false;
         }
 
     }

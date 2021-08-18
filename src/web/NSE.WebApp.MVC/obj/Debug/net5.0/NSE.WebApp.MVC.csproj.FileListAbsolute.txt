@@ -721,3 +721,4 @@ C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\bin\Debug\net5.0\Micro
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\web\NSE.WebApp.MVC\obj\Debug\net5.0\Razor\Views\Shared\Components\Summary\Default.cshtml.g.cs
