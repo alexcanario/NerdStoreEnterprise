@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 using NSE.WebApp.MVC.Models;
@@ -20,12 +21,12 @@ namespace NSE.WebApp.MVC.Controllers {
         }
 
         [HttpGet("nova-conta")]
-        public IActionResult Registrar() {
+        public IActionResult Registro() {
             return View();
         }
 
         [HttpPost("nova-conta")]
-        public async Task<IActionResult> Registrar(UsuarioRegistro usuarioRegistro) {
+        public async Task<IActionResult> Registro(UsuarioRegistro usuarioRegistro) {
             if (!ModelState.IsValid) return View(usuarioRegistro);
 
             var responseRegister = await _autenticacaoService.Registrar(usuarioRegistro);
