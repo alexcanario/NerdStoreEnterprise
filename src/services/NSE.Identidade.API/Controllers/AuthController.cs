@@ -34,7 +34,8 @@ namespace NSE.Identidade.API.Controllers {
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> Registrar(UsuarioRegistroViewModel usuarioRegistroVM) {
-            return new StatusCodeResult(401);
+            //Forçar erro 401 para testes
+            //return new StatusCodeResult(401);
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
             var identityUser = new IdentityUser {
