@@ -3,9 +3,27 @@
 using System;
 using System.Net;
 using System.Net.Http;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace NSE.WebApp.MVC.Services {
     public abstract class Service {
+        public object JsonDeserealizerOptions { get; private set; }
+
+        protected StringContent ObterConteudo(object dado) {
+            var usuarioJson = JsonSerializer.Serialize(dado);
+            return new StringContent(usuarioJson, Encoding.UTF8, "application/json");
+        }
+
+        protected async Task<T> DeserealizarObjetoResponse<T>(HttpResponseMessage response) {
+            var options = new JsonSerializerOptions {
+                PropertyNameCaseInsensitive = true,
+            };
+
+            return JsonSerializer.Deserialize<T>(await response.Content.ReadAsStringAsync(), options);
+        }
+
         protected bool TratarErrosResponse(HttpResponseMessage response) {
             switch ((int)response.StatusCode) {
                 case 401:  //HttpStatusCode.Unauthorized:   //401
