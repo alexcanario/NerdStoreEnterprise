@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+using NSE.WebApp.MVC.Extensions;
+
 namespace NSE.WebApp.MVC.Configuration {
     public static class WebAppConfig {
         public static IServiceCollection AddWebAppConfig(this IServiceCollection services) {
@@ -15,7 +17,8 @@ namespace NSE.WebApp.MVC.Configuration {
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
             } else {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/erro/500");
+                app.UseStatusCodePagesWithRedirects("/erro/{0}");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
@@ -25,6 +28,8 @@ namespace NSE.WebApp.MVC.Configuration {
             app.UseRouting();
 
             app.UseIdentityConfig();
+
+            app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseEndpoints(endpoints => {
                 endpoints.MapControllerRoute(
