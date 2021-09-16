@@ -137,3 +137,4 @@ C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\obj\Debug\net
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\obj\Debug\net5.0\NSE.Identidade.API.pdb
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\obj\Debug\net5.0\NSE.Identidade.API.genruntimeconfig.cache
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\obj\Debug\net5.0\NSE.Identidade.API.csproj.CopyComplete
