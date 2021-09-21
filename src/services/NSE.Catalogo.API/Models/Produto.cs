@@ -3,7 +3,7 @@
 using System;
 
 namespace NSE.Catalogo.API.Models {
-    public class Produto : Entidade {
+    public class Produto : Entidade, IAggregateRoot {
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public decimal Valor { get; set; }

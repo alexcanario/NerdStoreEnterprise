@@ -54,4 +54,3 @@ C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Pagamento.API\obj\Debug\net5
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Pagamento.API\obj\Debug\net5.0\ref\NSE.Pagamento.API.dll
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Pagamento.API\obj\Debug\net5.0\NSE.Pagamento.API.pdb
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Pagamento.API\obj\Debug\net5.0\NSE.Pagamento.API.genruntimeconfig.cache
-C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Pagamento.API\obj\Debug\net5.0\NSE.Pagamento.API.csproj.CopyComplete

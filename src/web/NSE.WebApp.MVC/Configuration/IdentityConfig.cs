@@ -4,16 +4,20 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace NSE.WebApp.MVC.Configuration
 {
-    public static class IdentityConfig {
-        public static void AddIdentityConfig(this IServiceCollection services) {
+    public static class IdentityConfig
+    {
+        public static void AddIdentityConfiguration(this IServiceCollection services)
+        {
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(opt => {
-                    opt.LoginPath = "/login";
-                    opt.AccessDeniedPath = "/erro/403";
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/login";
+                    options.AccessDeniedPath = "/erro/403";
                 });
         }
 
-        public static void UseIdentityConfig(this IApplicationBuilder app) {
+        public static void UseIdentityConfiguration(this IApplicationBuilder app)
+        {
             app.UseAuthentication();
             app.UseAuthorization();
         }

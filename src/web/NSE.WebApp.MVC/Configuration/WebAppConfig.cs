@@ -1,45 +1,59 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.Globalization;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
 using NSE.WebApp.MVC.Extensions;
 
-namespace NSE.WebApp.MVC.Configuration {
-    public static class WebAppConfig {
-        public static IServiceCollection AddWebAppConfig(this IServiceCollection services, IConfiguration configuration) {
+namespace NSE.WebApp.MVC.Configuration
+{
+    public static class WebAppConfig
+    {
+        public static void AddMvcConfiguration(this IServiceCollection services, IConfiguration configuration)
+        {
             services.AddControllersWithViews();
-            services.Configure<AppSettings>(configuration);
 
-            return services;
+            services.Configure<AppSettings>(configuration);
         }
 
-        public static IApplicationBuilder UseWebAppConfig(this IApplicationBuilder app, IWebHostEnvironment env) {
-            if (env.IsDevelopment()) {
+        public static void UseMvcConfiguration(this IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
                 app.UseDeveloperExceptionPage();
-            } else {
+            }
+            else
+            {
                 app.UseExceptionHandler("/erro/500");
                 app.UseStatusCodePagesWithRedirects("/erro/{0}");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
-            app.UseIdentityConfig();
+            app.UseIdentityConfiguration();
+
+            var supportedCultures = new[] { new CultureInfo("pt-BR") };
+            app.UseRequestLocalization(new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture("pt-BR"),
+                SupportedCultures = supportedCultures,
+                SupportedUICultures = supportedCultures
+            });
 
             app.UseMiddleware<ExceptionMiddleware>();
 
-            app.UseEndpoints(endpoints => {
+            app.UseEndpoints(endpoints =>
+            {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Catalogo}/{action=Index}/{id?}");
             });
-
-            return app;
         }
     }
 }

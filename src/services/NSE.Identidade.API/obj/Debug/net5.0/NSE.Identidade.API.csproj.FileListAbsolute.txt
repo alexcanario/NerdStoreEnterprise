@@ -137,4 +137,11 @@ C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\obj\Debug\net
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\obj\Debug\net5.0\NSE.Identidade.API.pdb
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\obj\Debug\net5.0\NSE.Identidade.API.genruntimeconfig.cache
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\obj\Debug\net5.0\NSE.Identidade.API.csproj.CopyComplete
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\bin\Debug\net5.0\NSE.Catalogo.API.deps.json
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\bin\Debug\net5.0\NSE.Catalogo.API.runtimeconfig.json
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\bin\Debug\net5.0\NSE.Catalogo.API.runtimeconfig.dev.json
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\bin\Debug\net5.0\NSE.Catalogo.API.exe
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\bin\Debug\net5.0\NSE.Catalogo.API.dll
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\bin\Debug\net5.0\NSE.Core.dll
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\bin\Debug\net5.0\NSE.Core.pdb
+C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Identidade.API\bin\Debug\net5.0\NSE.Catalogo.API.pdb

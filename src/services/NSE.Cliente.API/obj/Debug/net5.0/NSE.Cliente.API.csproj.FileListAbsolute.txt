@@ -54,4 +54,3 @@ C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Cliente.API\obj\Debug\net5.0
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Cliente.API\obj\Debug\net5.0\ref\NSE.Cliente.API.dll
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Cliente.API\obj\Debug\net5.0\NSE.Cliente.API.pdb
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Cliente.API\obj\Debug\net5.0\NSE.Cliente.API.genruntimeconfig.cache
-C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Cliente.API\obj\Debug\net5.0\NSE.Cliente.API.csproj.CopyComplete

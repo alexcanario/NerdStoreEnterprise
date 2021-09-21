@@ -19,7 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Configuration\" />
+    <ProjectReference Include="..\..\building blocks\NSE.Core\NSE.Core.csproj" />
+    <ProjectReference Include="..\NSE.Catalogo.API\NSE.Catalogo.API.csproj" />
   </ItemGroup>
 
 </Project>
