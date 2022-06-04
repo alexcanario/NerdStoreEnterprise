@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FBRu8NABpuKv3p6+aN59HpFTbSSMzE0633QldUUM829vrpgB1+mteON8aSV5vRtJQtBflOf/5ZIsyNJWpOBVow==",
+  "dgSpecHash": "Q0o7RujfosJHLucglqNg2FUE6aZlYbUHUn8ZKkUZYtf2feaPuoa/Nq9HiGaoIj/T/5/w03lw6sAxwXJ7E4BIxQ==",
   "success": true,
-  "projectFilePath": "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\building blocks\\NSE.Core\\NSE.Core.csproj",
+  "projectFilePath": "C:\\labs\\alexcanario\\aspNetCore\\eduardoPires\\NerdStoreEnt\\src\\building blocks\\NSE.Core\\NSE.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

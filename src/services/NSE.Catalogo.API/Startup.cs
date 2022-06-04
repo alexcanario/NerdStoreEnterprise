@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 using NSE.Catalogo.API.Config;
+using NSE.WebApi.Core.Identidade;
 
 namespace NSE.Catalogo.API {
     public class Startup {
@@ -27,8 +28,12 @@ namespace NSE.Catalogo.API {
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
             services.AddApiConfig(Configuration);
-            services.AddDipConfig();
+
+            services.AddJwtConfig(Configuration);
+
             services.AddSwaggerConfig();
+
+            services.AddDipConfig();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

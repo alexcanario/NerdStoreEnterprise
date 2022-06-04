@@ -21,3 +21,15 @@ C:\labs\Eduardo-Pires\NerdStoreEnt\src\building blocks\NSE.Core\obj\Debug\net5.0
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\building blocks\NSE.Core\obj\Debug\net5.0\NSE.Core.dll
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\building blocks\NSE.Core\obj\Debug\net5.0\ref\NSE.Core.dll
 C:\labs\Eduardo-Pires\NerdStoreEnt\src\building blocks\NSE.Core\obj\Debug\net5.0\NSE.Core.pdb
+C:\labs\dotnet\aspNetCore\eduardoPires\NerdStoreEnt\src\building blocks\NSE.Core\bin\Debug\net5.0\NSE.Core.deps.json
+C:\labs\dotnet\aspNetCore\eduardoPires\NerdStoreEnt\src\building blocks\NSE.Core\bin\Debug\net5.0\NSE.Core.dll
+C:\labs\dotnet\aspNetCore\eduardoPires\NerdStoreEnt\src\building blocks\NSE.Core\bin\Debug\net5.0\ref\NSE.Core.dll
+C:\labs\dotnet\aspNetCore\eduardoPires\NerdStoreEnt\src\building blocks\NSE.Core\bin\Debug\net5.0\NSE.Core.pdb
+C:\labs\dotnet\aspNetCore\eduardoPires\NerdStoreEnt\src\building blocks\NSE.Core\obj\Debug\net5.0\NSE.Core.csproj.AssemblyReference.cache
+C:\labs\dotnet\aspNetCore\eduardoPires\NerdStoreEnt\src\building blocks\NSE.Core\obj\Debug\net5.0\NSE.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\labs\dotnet\aspNetCore\eduardoPires\NerdStoreEnt\src\building blocks\NSE.Core\obj\Debug\net5.0\NSE.Core.AssemblyInfoInputs.cache
+C:\labs\dotnet\aspNetCore\eduardoPires\NerdStoreEnt\src\building blocks\NSE.Core\obj\Debug\net5.0\NSE.Core.AssemblyInfo.cs
+C:\labs\dotnet\aspNetCore\eduardoPires\NerdStoreEnt\src\building blocks\NSE.Core\obj\Debug\net5.0\NSE.Core.csproj.CoreCompileInputs.cache
+C:\labs\dotnet\aspNetCore\eduardoPires\NerdStoreEnt\src\building blocks\NSE.Core\obj\Debug\net5.0\NSE.Core.dll
+C:\labs\dotnet\aspNetCore\eduardoPires\NerdStoreEnt\src\building blocks\NSE.Core\obj\Debug\net5.0\ref\NSE.Core.dll
+C:\labs\dotnet\aspNetCore\eduardoPires\NerdStoreEnt\src\building blocks\NSE.Core\obj\Debug\net5.0\NSE.Core.pdb

@@ -1914,6 +1914,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.10",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.11.1",
           "NSE.Core": "1.0.0",
+          "NSE.WebApi.Core": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.1"
         },
         "compile": {
@@ -1934,6 +1935,19 @@
         },
         "runtime": {
           "bin/placeholder/NSE.Core.dll": {}
+        }
+      },
+      "NSE.WebApi.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.10"
+        },
+        "compile": {
+          "bin/placeholder/NSE.WebApi.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NSE.WebApi.Core.dll": {}
         }
       }
     }
@@ -6620,6 +6634,11 @@
       "type": "project",
       "path": "../../building blocks/NSE.Core/NSE.Core.csproj",
       "msbuildProject": "../../building blocks/NSE.Core/NSE.Core.csproj"
+    },
+    "NSE.WebApi.Core/1.0.0": {
+      "type": "project",
+      "path": "../../building blocks/NSE.WebApi.Core/NSE.WebApi.Core.csproj",
+      "msbuildProject": "../../building blocks/NSE.WebApi.Core/NSE.WebApi.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6633,34 +6652,33 @@
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.10",
       "NSE.Catalogo.API >= 1.0.0",
       "NSE.Core >= 1.0.0",
+      "NSE.WebApi.Core >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.1"
     ]
   },
   "packageFolders": {
     "C:\\Users\\alexc\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages": {},
+    "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\services\\NSE.Identidade.API\\NSE.Identidade.API.csproj",
+      "projectUniqueName": "C:\\labs\\alexcanario\\aspNetCore\\eduardoPires\\NerdStoreEnt\\src\\services\\NSE.Identidade.API\\NSE.Identidade.API.csproj",
       "projectName": "NSE.Identidade.API",
-      "projectPath": "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\services\\NSE.Identidade.API\\NSE.Identidade.API.csproj",
+      "projectPath": "C:\\labs\\alexcanario\\aspNetCore\\eduardoPires\\NerdStoreEnt\\src\\services\\NSE.Identidade.API\\NSE.Identidade.API.csproj",
       "packagesPath": "C:\\Users\\alexc\\.nuget\\packages\\",
-      "outputPath": "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\services\\NSE.Identidade.API\\obj\\",
+      "outputPath": "C:\\labs\\alexcanario\\aspNetCore\\eduardoPires\\NerdStoreEnt\\src\\services\\NSE.Identidade.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages",
+        "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\alexc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -6669,7 +6687,7 @@
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -6677,11 +6695,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\building blocks\\NSE.Core\\NSE.Core.csproj": {
-              "projectPath": "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\building blocks\\NSE.Core\\NSE.Core.csproj"
+            "C:\\labs\\alexcanario\\aspNetCore\\eduardoPires\\NerdStoreEnt\\src\\building blocks\\NSE.Core\\NSE.Core.csproj": {
+              "projectPath": "C:\\labs\\alexcanario\\aspNetCore\\eduardoPires\\NerdStoreEnt\\src\\building blocks\\NSE.Core\\NSE.Core.csproj"
             },
-            "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\services\\NSE.Catalogo.API\\NSE.Catalogo.API.csproj": {
-              "projectPath": "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\services\\NSE.Catalogo.API\\NSE.Catalogo.API.csproj"
+            "C:\\labs\\alexcanario\\aspNetCore\\eduardoPires\\NerdStoreEnt\\src\\building blocks\\NSE.WebApi.Core\\NSE.WebApi.Core.csproj": {
+              "projectPath": "C:\\labs\\alexcanario\\aspNetCore\\eduardoPires\\NerdStoreEnt\\src\\building blocks\\NSE.WebApi.Core\\NSE.WebApi.Core.csproj"
+            },
+            "C:\\labs\\alexcanario\\aspNetCore\\eduardoPires\\NerdStoreEnt\\src\\services\\NSE.Catalogo.API\\NSE.Catalogo.API.csproj": {
+              "projectPath": "C:\\labs\\alexcanario\\aspNetCore\\eduardoPires\\NerdStoreEnt\\src\\services\\NSE.Catalogo.API\\NSE.Catalogo.API.csproj"
             }
           }
         }
@@ -6741,12 +6762,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.9, 5.0.9]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -6755,7 +6770,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.1.21463.6\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

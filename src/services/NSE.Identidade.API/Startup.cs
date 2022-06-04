@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 using NSE.Identidade.API.Configuration;
 
@@ -21,7 +20,7 @@ namespace NSE.Identidade.API {
         {
             services.AddIdentityConfig(Configuration);
 
-            services.AddControllers();
+            services.AddApiConfig();
 
             #region Dependency Injection for Swagger
             services.AddSwaggerConfig();
@@ -29,25 +28,12 @@ namespace NSE.Identidade.API {
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment()) {
-                app.UseDeveloperExceptionPage();
-            }
-
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
             #region Use Swagger for pipeline
             app.UseSwaggerConfig(env);
             #endregion
 
-            app.UseHttpsRedirection();
-
-            app.UseRouting();
-
-            app.UseIdentityConfig();
-
-            app.UseEndpoints(endpoints => {
-                endpoints.MapControllers();
-            });
+            app.UseApiConfig(env);
         }
     }
 }

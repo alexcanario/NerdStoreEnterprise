@@ -42,6 +42,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "5.0.10",
           "NSE.Catalogo.API": "1.0.0",
           "NSE.Core": "1.0.0",
+          "NSE.WebApi.Core": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.1",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "5.0.0.0",
@@ -1544,6 +1545,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.10",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.11.1",
           "NSE.Core": "1.0.0",
+          "NSE.WebApi.Core": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.1"
         },
         "runtime": {
@@ -1559,6 +1561,17 @@
         },
         "compile": {
           "NSE.Core.dll": {}
+        }
+      },
+      "NSE.WebApi.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.10"
+        },
+        "runtime": {
+          "NSE.WebApi.Core.dll": {}
+        },
+        "compile": {
+          "NSE.WebApi.Core.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -4141,6 +4154,11 @@
       "sha512": ""
     },
     "NSE.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NSE.WebApi.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MNYEVahgfsWzHzLoe+JXYnXbv17o8XEEIVbsVcUsbX5nHC1VH9nfE0dycvWbMUGHMWIETeyTg1D2bGqwSrBi1Q==",
+  "dgSpecHash": "9oBfoVTPox0gE+HA927Fr2n4NmaZgFlaqnvt52d+fevKIre5TKIbQPWHq4rkam1VJZ9r6M2IFTQeRAL/ILDiyQ==",
   "success": true,
-  "projectFilePath": "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\services\\NSE.Carrinho.API\\NSE.Carrinho.API.csproj",
+  "projectFilePath": "C:\\labs\\alexcanario\\aspNetCore\\eduardoPires\\NerdStoreEnt\\src\\services\\NSE.Carrinho.API\\NSE.Carrinho.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexc\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\alexc\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
@@ -10,8 +10,7 @@
     "C:\\Users\\alexc\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.1\\swashbuckle.aspnetcore.6.2.1.nupkg.sha512",
     "C:\\Users\\alexc\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.1\\swashbuckle.aspnetcore.swagger.6.2.1.nupkg.sha512",
     "C:\\Users\\alexc\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.1\\swashbuckle.aspnetcore.swaggergen.6.2.1.nupkg.sha512",
-    "C:\\Users\\alexc\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.1\\swashbuckle.aspnetcore.swaggerui.6.2.1.nupkg.sha512",
-    "C:\\Users\\alexc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.9\\microsoft.netcore.app.host.win-x64.5.0.9.nupkg.sha512"
+    "C:\\Users\\alexc\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.1\\swashbuckle.aspnetcore.swaggerui.6.2.1.nupkg.sha512"
   ],
   "logs": []
 }

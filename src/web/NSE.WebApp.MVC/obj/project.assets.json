@@ -1655,29 +1655,27 @@
   },
   "packageFolders": {
     "C:\\Users\\alexc\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages": {},
+    "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\web\\NSE.WebApp.MVC\\NSE.WebApp.MVC.csproj",
+      "projectUniqueName": "C:\\labs\\alexcanario\\aspNetCore\\eduardoPires\\NerdStoreEnt\\src\\web\\NSE.WebApp.MVC\\NSE.WebApp.MVC.csproj",
       "projectName": "NSE.WebApp.MVC",
-      "projectPath": "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\web\\NSE.WebApp.MVC\\NSE.WebApp.MVC.csproj",
+      "projectPath": "C:\\labs\\alexcanario\\aspNetCore\\eduardoPires\\NerdStoreEnt\\src\\web\\NSE.WebApp.MVC\\NSE.WebApp.MVC.csproj",
       "packagesPath": "C:\\Users\\alexc\\.nuget\\packages\\",
-      "outputPath": "C:\\labs\\Eduardo-Pires\\NerdStoreEnt\\src\\web\\NSE.WebApp.MVC\\obj\\",
+      "outputPath": "C:\\labs\\alexcanario\\aspNetCore\\eduardoPires\\NerdStoreEnt\\src\\web\\NSE.WebApp.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages",
+        "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\alexc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -1686,7 +1684,7 @@
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -1737,12 +1735,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.9, 5.0.9]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1751,7 +1743,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.1.21463.6\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

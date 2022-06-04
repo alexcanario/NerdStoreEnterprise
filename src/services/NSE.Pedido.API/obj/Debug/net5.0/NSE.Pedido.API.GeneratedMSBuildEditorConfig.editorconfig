@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NSE.Pedido.API
-build_property.ProjectDir = C:\labs\Eduardo-Pires\NerdStoreEnt\src\services\NSE.Pedido.API\
+build_property.ProjectDir = C:\labs\alexcanario\aspNetCore\eduardoPires\NerdStoreEnt\src\services\NSE.Pedido.API\
